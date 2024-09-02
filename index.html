@@ -41,8 +41,9 @@
         section,
         summary {
             display: block;
-            background-color: #ffdea9;
+            background-color: #fee8c1;
         }
+       
 
         body,
         button,
@@ -53,10 +54,12 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
             -webkit-font-smoothing: antialiased;
             -webkit-text-size-adjust: 100%;
+            
         }
 
         a {
             background-color: transparent
+            
         }
 
         a,
@@ -1805,28 +1808,26 @@
             font-family: Arial, sans-serif; /* Optional: Set a default font */
         }
         .marquee {
-            background-color: black;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-            position: relative;
-            z-index: 1000;
-        }
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    z-index: 500; /* Lower z-index */
+}
 
-        .marquee p {
-            display: inline-block;
-            animation: scroll 15s linear infinite;
-        }
+.marquee p {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+}
 
-        /* Hide marquee on phone screens */
-        @media only screen and (max-width: 1024px) {
-            .marquee {
-                display: none !important;
-            }
-        }
-
+@media only screen and (max-width: 1024px) {
+    .menu.open { /* Adjust according to your menu's open state class */
+        z-index: 1500; /* Ensure it's above the marquee */
+    }
+}
         #preloader {
     position: fixed;
     left: 0;
@@ -1894,6 +1895,29 @@
                 transform: translateX(-100%);
             }
         }
+        #header {
+    background-color: #fee8c1 !important; /* Force the background color across the entire header */
+    padding: 0; /* Reset padding if needed */
+}
+
+.site-header {
+    background-color: #fee8c1 !important; /* Apply the background color to the site-header */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the width/height */
+    width: 100%; /* Ensure full width */
+}
+
+.header-logo {
+    background-color: #fee8c1 !important; /* Force the background color for the logo section */
+}
+
+.icons-col {
+    background-color: #fee8c1 !important; /* Force the background color for the icons section */
+}
+
     </style>
     <link rel="stylesheet" href="//poppi.in/cdn/shop/t/24/assets/theme.css?v=2268104032774005261724761797" type="text/css" media="all">
     <script src="//poppi.in/cdn/shop/t/24/assets/lazysizes.js?v=9525017869278013171724697092" async></script>
@@ -2389,6 +2413,7 @@
                                             </div>
                                             <div class="details"><a href="/products/cameilla-printed-tiered-dress" class="grid-view-item__title">Camellia Printed Tiered Dress</a>
                                                 <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">Rs. 4,200.00</span></div>
+                                                <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">45$</span></div>
                                                 <ul class="gridSwatches"></ul>
                                             </div>
                                             <div class="shopWrapper" id="ProductSection-7464761524433"></div>
@@ -2410,6 +2435,8 @@
                                             </div>
                                             <div class="details"><a href="/products/amber-printed-mini-dress" class="grid-view-item__title">Amber Printed Mini Dress</a>
                                                 <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">Rs. 4,200.00</span></div>
+                                                <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">45$</span></div>
+
                                                 <ul class="gridSwatches"></ul>
                                             </div>
                                             <div class="shopWrapper" id="ProductSection-7464759886033"></div>
@@ -2546,11 +2573,12 @@
                                                 <div class="button-set hide-sm"><a class="btn btn-options quickShop" href="/products/leafy-printed-mini-dress" aria-label="Quick Shop"><i class="at at-cart-l" aria-hidden="true"></i><span class="tooltip-label">Quick Shop</span></a><a href="/products/leafy-printed-mini-dress?section_id=quick-view"
                                                         rel="nofollow" class="btn quick-view" aria-label="Quick View"><i class="at at-search-plus" aria-hidden="true"></i><span class="tooltip-label">Quick View</span></a></div>
                                             </div>
-                                            <div class="details"><a href="/products/leafy-printed-mini-dress" class="grid-view-item__title">Leafy Printed Mini Dress</a>
-                                                <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">Rs. 3,600.00</span></div>
-                                                
+                                             <div class="details"><a href="/products/cameilla-printed-tiered-dress" class="grid-view-item__title">Camellia Printed Tiered Dress</a>
+                                                <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">Rs. 4,200.00</span></div>
+                                                <div class="grid-view-item__meta"><span class="v-hidden">Regular price</span><span class="pr_price">45$</span></div>
                                                 <ul class="gridSwatches"></ul>
                                             </div>
+                                           
                                             <div class="shopWrapper" id="ProductSection-7464759689425"></div>
                                         </div>
                                     </div>
@@ -2847,7 +2875,7 @@
         
             <div id="shopify-section-template--16280798298321__store_features_tWHTNg" class="shopify-section">
                 <div class="content-indent default">
-                    <div class="section-cover small-pd" style="background:#ab6b00;">
+                    <div class="section-cover small-pd" style="background:#dcb571;">
                         <div class="page-width wow fadeIn">
                             <ul class="store-info fl f-jcsb sectemplate--16280798298321__store_features_tWHTNg style2" style="--cl:#333333;--tcl:#111111;--tfs:14px;--tsm:12px;--tff:var(--ft1);--tfw:600;--lh:1.2;--icl:#333333;--isz:30px;--bd:#eeeeee">
                                 <li class="fl1 item">
